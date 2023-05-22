@@ -9,6 +9,7 @@
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h3>  
 <h3>@Html.DisplayNameFor(model => model.Category): @Html.DisplayFor(model => model.Category.Name)</h3>
+<h3>@Html.DisplayNameFor(model => model.DueDate): @Model.DueDate.ToString("MM-dd-yyyy")</h3>
 @if(@Model.Completed == false)
 {
     <p>This item has not been completed!</p>

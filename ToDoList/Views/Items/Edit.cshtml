@@ -21,6 +21,9 @@
   @Html.LabelFor(model => model.Completed, "Mark as complete")
   @Html.CheckBoxFor(model => model.Completed)
 
+  @Html.LabelFor(model => model.DueDate)
+  @Html.TextBoxFor(model => model.DueDate, new { @type="date"})
+
   <input type="submit" value="Save" />
 }
 
