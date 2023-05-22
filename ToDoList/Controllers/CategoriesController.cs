@@ -37,7 +37,9 @@ namespace ToDoList.Controllers
     public ActionResult Details(int id)
     {
       Category thisCategory = _db.Categories
-                                  .Include(category => category.Items)
+                                  .Include(category => category.Items) //cat? bottom lesson 5
+                                  .ThenInclude(item => item.JoinEntities)
+                                  .ThenInclude(join => join.Tag)
                                   .FirstOrDefault(category => category.CategoryId == id);
       return View(thisCategory);
     }
